@@ -4,6 +4,23 @@
             <version>0.1.0</version>
         </Alanstormdotcom_Helloworld>
     </modules>
+    <global>
+        <!-- ... -->
+        <helpers>
+            <helloworld>
+                <class>Alanstormdotcom_Helloworld_Helper</class>
+            </helloworld>
+        </helpers>    
+        <!-- ... -->
+        <models>
+            <!-- ... -->
+            <helloworld>
+                <class>Alanstormdotcom_Helloworld_Model</class>
+            </helloworld>    
+            <!-- ... -->
+        </models>
+
+    </global>
     <frontend>
         <routers>
             <helloworld>
@@ -15,4 +32,27 @@
             </helloworld>
         </routers>    
     </frontend>
+
+    <!-- ... -->
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <helloworld_options>
+                                            <title>Store Hello World Module Section</title>
+                                        </helloworld_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
 </config>    
